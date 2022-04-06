@@ -8,7 +8,6 @@ import eth from '../assets/eth.png';
 import {TransactionContext}  from '../context/TransacionContext';
 
 
-
 const style = {
     wrapper: `p-4 w-screen flex justify-between items-center`,
     headerLogo: `flex w-1/4 items-center justify-start`,
@@ -28,6 +27,15 @@ const style = {
 const Header = () => {
     const [selectedNav, setSelectedNav] = useState('swap')
     const {connectWallet, currentAccount} = useContext(TransactionContext)
+    const [userName, setUserName] = useState()
+
+    useEffect(() => {
+
+      if(!currentAccount) return
+      setUserName(`${currentAccount.slice(0, 7)}...${currentAccount.slice(35)} `)
+    
+    }, [currentAccount])
+    
 
     console.log({connectWallet, currentAccount})
 
@@ -85,7 +93,7 @@ const Header = () => {
           </div>
             {currentAccount ? (
               <div className={`${style.button} ${style.buttonPadding}`}>
-              <div className={style.buttonTextContainer}>0x123...</div>
+              <div className={style.buttonTextContainer}>{userName}</div>
             </div>
               
             ) : (
