@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { TransactionProvider } from '../context/TransacionContext'
+import { TransactionProvider } from '../context/transacioncontext'
 
 function MyApp({ Component, pageProps }) {
   return (

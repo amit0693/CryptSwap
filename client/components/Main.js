@@ -3,10 +3,10 @@ import { RiSettings3Fill } from 'react-icons/ri'
 import { AiOutlineDown } from 'react-icons/ai'
 import ethLogo from '../assets/eth.png'
 import { useContext } from 'react'
-import { TransactionContext } from '../context/TransacionContext'
+import { TransactionContext } from '../context/transacioncontext'
 import Modal from 'react-modal'
 import { useRouter } from 'next/router'
-import TransactionLoader from './TransactionLoader'
+import TransactionLoader from './transactionloader'
 
 Modal.setAppElement('#__next')
 

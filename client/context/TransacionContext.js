@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from "react";
 import {contractABI, contractAddress} from '../lib/constants'
 import {ethers} from 'ethers'
-import { client } from "../lib/sanityClient";
+import { client } from "../lib/sanityclient";
 import { useRouter } from 'next/router'
 
 export const TransactionContext = React.createContext()
